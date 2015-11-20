@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using WMPLib;
 using System.Windows.Forms;
 
 namespace SAP_2
@@ -17,10 +10,11 @@ namespace SAP_2
             InitializeComponent();
         }
 
+        playsingle psingle = new playsingle();
+        public static string source = playsingle.textBox1.ToString();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string source = textBox1.ToString();
-
             if (source.Contains("\""))
             {
                 source = source.Replace("\"", "");
@@ -28,12 +22,16 @@ namespace SAP_2
 
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
             string position;
-            ConsoleKeyInfo input;
             wplayer.URL = source;
-            wplayer.controls.stop();
             wplayer.controls.play();
 
             wplayer.settings.volume = 50;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.controls.stop();
         }
     }
 }
