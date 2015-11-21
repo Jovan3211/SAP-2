@@ -8,3 +8,14 @@ D:\Programming\SAP-2\SAP 2\bin\Debug\SAP 2.pdb
 D:\Programming\SAP-2\SAP 2\bin\Debug\Interop.WMPLib.dll
 D:\Programming\SAP-2\SAP 2\obj\Debug\SAP 2.exe
 D:\Programming\SAP-2\SAP 2\obj\Debug\SAP 2.pdb
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP 2.exe
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP 2.pdb
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP 2.csprojResolveAssemblyReference.cache
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP_2.Form1.resources
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP_2.playsingle.resources
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP_2.Properties.Resources.resources
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP 2.csproj.GenerateResource.Cache
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\bin\Debug\SAP 2.exe
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\bin\Debug\SAP 2.pdb
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\bin\Debug\Interop.WMPLib.dll
+C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP_2.PlayerControl.resources
