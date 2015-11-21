@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(162, 128);
+            this.ClientSize = new System.Drawing.Size(162, 131);
             this.Controls.Add(this.selectplist);
             this.Controls.Add(this.createplist);
             this.Controls.Add(this.playSingle);
