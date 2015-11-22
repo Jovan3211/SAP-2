@@ -38,7 +38,12 @@ namespace SAP_2
 
             if (open.ShowDialog() == DialogResult.OK)
             {
-                textBox_addSong.Text = open.FileName;
+                //sklanjanje italic-a
+                textBox_addSong.Clear();
+                textBox_addSong.Font = new Font(textBox_addSong.Font, textBox_addSong.Font.Style & FontStyle.Regular);
+                textBox_addSong.ForeColor = Color.Black;
+
+                textBox_addSong.Text = Path.GetFileNameWithoutExtension(open.FileName);
             }
         }
 
@@ -52,7 +57,7 @@ namespace SAP_2
             else
             {
                 listBox.Items.Add(textBox_addSong.Text);
-                playlistSongs.Add(textBox_addSong.Text);
+                playlistSongs.Add(open.FileName);
             }
         }
 
@@ -87,14 +92,13 @@ namespace SAP_2
                         wplayer.controls.play();
 
                         //uzimanje informacija o pesmi
-                        string duration = wplayer.currentMedia.durationString;
                         string artist = wplayer.currentMedia.getItemInfo("Artist");
                         string title = wplayer.currentMedia.getItemInfo("Title");
 
                         wplayer.controls.stop();
 
                         //pisanje u playlistu
-                        writer.WriteLine("#EXTINF:{0},{1} - {2}", duration, artist, title);
+                        writer.WriteLine("#EXTINF:{0} {1}", artist, title);
                         writer.WriteLine("{0}\n", path);
                     }
                 }

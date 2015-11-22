@@ -28,10 +28,16 @@ namespace SAP_2
                 source = source.Replace("\"", "");
             }
 
+            //provera da li je plejlista
+            if (source.Contains(".m3u"))
+            {
+
+            }
+
             wplayer.URL = source;
             wplayer.controls.play();
             label_songName.Text += Path.GetFileNameWithoutExtension(source);
-            playsingle.ActiveForm.Text += Path.GetFileNameWithoutExtension(source);                  // Umesto onog tvog pls
+            playsingle.ActiveForm.Text = Path.GetFileNameWithoutExtension(source);
         }
 
         //zaustavljanje pesme
@@ -40,7 +46,7 @@ namespace SAP_2
             wplayer.controls.stop();
             button_play.Enabled = true;
             label_songName.Text = "Playing: ";
-            playsingle.ActiveForm.Text = "Playing:  ";                                               // Umesto onog tvog pls
+            playsingle.ActiveForm.Text = "SAP 2";
         }
 
         //selektovanje pesme preko file browsera.
@@ -83,6 +89,54 @@ namespace SAP_2
         private void t1_Tick(object sender, EventArgs e)
         {
             label_songTime.Text = wplayer.controls.currentPositionString;
+        }
+
+        private void playASongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Music Files|*.mp3|All Files (*.*)|*.*";
+            open.FilterIndex = 1;
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = open.FileName;
+            }
+
+            source = textBox1.Text;
+            if (source.Contains("\""))
+            {
+                source = source.Replace("\"", "");
+            }
+
+            wplayer.URL = source;
+            wplayer.controls.play();
+            label_songName.Text += Path.GetFileNameWithoutExtension(source);
+            playsingle.ActiveForm.Text = Path.GetFileNameWithoutExtension(source);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void createANewPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addplist form = new addplist();
+            form.Show();
+        }
+
+        private void openAPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Playlist Files|*.m3u|All Files (*.*)|*.*";
+            open.FilterIndex = 1;
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = open.FileName;
+            }
         }
     }
 }

@@ -44,21 +44,33 @@
             this.label_songTime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playASongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playMultipleSongsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createANewPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openAPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Location = new System.Drawing.Point(10, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(155, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Select an audio file:";
+            this.label1.Text = "Select an audio file or a playlist:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 25);
+            this.textBox1.Location = new System.Drawing.Point(10, 48);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 20);
             this.textBox1.TabIndex = 1;
@@ -66,7 +78,7 @@
             // button_play
             // 
             this.button_play.Image = ((System.Drawing.Image)(resources.GetObject("button_play.Image")));
-            this.button_play.Location = new System.Drawing.Point(13, 51);
+            this.button_play.Location = new System.Drawing.Point(13, 74);
             this.button_play.Name = "button_play";
             this.button_play.Size = new System.Drawing.Size(40, 34);
             this.button_play.TabIndex = 2;
@@ -76,7 +88,7 @@
             // button_stop
             // 
             this.button_stop.Image = ((System.Drawing.Image)(resources.GetObject("button_stop.Image")));
-            this.button_stop.Location = new System.Drawing.Point(105, 51);
+            this.button_stop.Location = new System.Drawing.Point(105, 74);
             this.button_stop.Name = "button_stop";
             this.button_stop.Size = new System.Drawing.Size(40, 34);
             this.button_stop.TabIndex = 4;
@@ -89,7 +101,7 @@
             // 
             // btOpen
             // 
-            this.btOpen.Location = new System.Drawing.Point(250, 25);
+            this.btOpen.Location = new System.Drawing.Point(250, 48);
             this.btOpen.Name = "btOpen";
             this.btOpen.Size = new System.Drawing.Size(25, 20);
             this.btOpen.TabIndex = 5;
@@ -100,7 +112,7 @@
             // button_pause
             // 
             this.button_pause.Image = ((System.Drawing.Image)(resources.GetObject("button_pause.Image")));
-            this.button_pause.Location = new System.Drawing.Point(59, 51);
+            this.button_pause.Location = new System.Drawing.Point(59, 74);
             this.button_pause.Name = "button_pause";
             this.button_pause.Size = new System.Drawing.Size(40, 34);
             this.button_pause.TabIndex = 8;
@@ -109,7 +121,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(152, 51);
+            this.trackBar1.Location = new System.Drawing.Point(152, 74);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(121, 45);
@@ -120,7 +132,7 @@
             // label_volume
             // 
             this.label_volume.AutoSize = true;
-            this.label_volume.Location = new System.Drawing.Point(162, 72);
+            this.label_volume.Location = new System.Drawing.Point(162, 95);
             this.label_volume.Name = "label_volume";
             this.label_volume.Size = new System.Drawing.Size(102, 13);
             this.label_volume.TabIndex = 12;
@@ -129,7 +141,7 @@
             // label_volumeAmount
             // 
             this.label_volumeAmount.AutoSize = true;
-            this.label_volumeAmount.Location = new System.Drawing.Point(207, 72);
+            this.label_volumeAmount.Location = new System.Drawing.Point(207, 95);
             this.label_volumeAmount.Name = "label_volumeAmount";
             this.label_volumeAmount.Size = new System.Drawing.Size(19, 13);
             this.label_volumeAmount.TabIndex = 13;
@@ -139,7 +151,7 @@
             // 
             this.label_songName.AutoSize = true;
             this.label_songName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songName.Location = new System.Drawing.Point(7, 101);
+            this.label_songName.Location = new System.Drawing.Point(7, 124);
             this.label_songName.Name = "label_songName";
             this.label_songName.Size = new System.Drawing.Size(62, 17);
             this.label_songName.TabIndex = 14;
@@ -149,7 +161,7 @@
             // 
             this.label_songTime.AutoSize = true;
             this.label_songTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songTime.Location = new System.Drawing.Point(206, 99);
+            this.label_songTime.Location = new System.Drawing.Point(226, 121);
             this.label_songTime.Name = "label_songTime";
             this.label_songTime.Size = new System.Drawing.Size(49, 20);
             this.label_songTime.TabIndex = 15;
@@ -159,7 +171,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(7, 123);
+            this.label2.Location = new System.Drawing.Point(7, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 16;
@@ -169,6 +181,92 @@
             // 
             this.t1.Interval = 500;
             this.t1.Tick += new System.EventHandler(this.t1_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mediaToolStripMenuItem,
+            this.playlistToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mediaToolStripMenuItem
+            // 
+            this.mediaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.playASongToolStripMenuItem,
+            this.playMultipleSongsToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.mediaToolStripMenuItem.Name = "mediaToolStripMenuItem";
+            this.mediaToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.mediaToolStripMenuItem.Text = "Media";
+            // 
+            // playASongToolStripMenuItem
+            // 
+            this.playASongToolStripMenuItem.Name = "playASongToolStripMenuItem";
+            this.playASongToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.playASongToolStripMenuItem.Text = "Play a song";
+            this.playASongToolStripMenuItem.Click += new System.EventHandler(this.playASongToolStripMenuItem_Click);
+            // 
+            // playMultipleSongsToolStripMenuItem
+            // 
+            this.playMultipleSongsToolStripMenuItem.Name = "playMultipleSongsToolStripMenuItem";
+            this.playMultipleSongsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.playMultipleSongsToolStripMenuItem.Text = "Play multiple songs";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // playlistToolStripMenuItem
+            // 
+            this.playlistToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createANewPlaylistToolStripMenuItem,
+            this.openAPlaylistToolStripMenuItem});
+            this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
+            this.playlistToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.playlistToolStripMenuItem.Text = "Playlist";
+            // 
+            // createANewPlaylistToolStripMenuItem
+            // 
+            this.createANewPlaylistToolStripMenuItem.Name = "createANewPlaylistToolStripMenuItem";
+            this.createANewPlaylistToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.createANewPlaylistToolStripMenuItem.Text = "Create a new playlist";
+            this.createANewPlaylistToolStripMenuItem.Click += new System.EventHandler(this.createANewPlaylistToolStripMenuItem_Click);
+            // 
+            // openAPlaylistToolStripMenuItem
+            // 
+            this.openAPlaylistToolStripMenuItem.Name = "openAPlaylistToolStripMenuItem";
+            this.openAPlaylistToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.openAPlaylistToolStripMenuItem.Text = "Open a playlist";
+            this.openAPlaylistToolStripMenuItem.Click += new System.EventHandler(this.openAPlaylistToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHelpToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // viewHelpToolStripMenuItem
+            // 
+            this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.viewHelpToolStripMenuItem.Text = "View Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // playsingle
             // 
@@ -187,9 +285,17 @@
             this.Controls.Add(this.button_play);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 288);
+            this.MinimumSize = new System.Drawing.Size(300, 288);
             this.Name = "playsingle";
-            this.Text = "Playing";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.Text = "SAP 2";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +317,16 @@
         private System.Windows.Forms.Label label_songTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer t1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createANewPlaylistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openAPlaylistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mediaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playASongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playMultipleSongsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

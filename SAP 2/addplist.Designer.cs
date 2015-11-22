@@ -183,7 +183,11 @@
             this.Controls.Add(this.label_saveLocation);
             this.Controls.Add(this.label_playListName);
             this.Controls.Add(this.textBox_playlistName);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(568, 350);
+            this.MinimumSize = new System.Drawing.Size(568, 350);
             this.Name = "addplist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create playlist";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dragDrop)).EndInit();
             this.ResumeLayout(false);
