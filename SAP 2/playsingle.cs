@@ -19,6 +19,16 @@ namespace SAP_2
             wplayer.settings.volume = 50;
         }
 
+        //funkcija za pustanje muzike
+        public void play(string source)
+        {
+            wplayer.URL = source;
+            wplayer.controls.play();
+            label_songName.Text += Path.GetFileNameWithoutExtension(source);
+            label_songName.Visible = true;
+            playsingle.ActiveForm.Text = Path.GetFileNameWithoutExtension(source);
+        }
+
         //klikanjem dugmeta play, pustiti muziku
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,13 +41,10 @@ namespace SAP_2
             //provera da li je plejlista
             if (source.Contains(".m3u"))
             {
-
+                label_upNext.Visible = true;
             }
 
-            wplayer.URL = source;
-            wplayer.controls.play();
-            label_songName.Text += Path.GetFileNameWithoutExtension(source);
-            playsingle.ActiveForm.Text = Path.GetFileNameWithoutExtension(source);
+            play(source);
         }
 
         //zaustavljanje pesme
@@ -45,7 +52,8 @@ namespace SAP_2
         {
             wplayer.controls.stop();
             button_play.Enabled = true;
-            label_songName.Text = "Playing: ";
+            label_songName.Visible = false;
+            label_upNext.Visible = false;
             playsingle.ActiveForm.Text = "SAP 2";
         }
 
@@ -54,7 +62,7 @@ namespace SAP_2
         {
             OpenFileDialog open = new OpenFileDialog();
 
-            open.Filter = "Music Files|*.mp3|All Files (*.*)|*.*";
+            open.Filter = "Music Files|*.mp3|Playlist Files|*.m3u|All Files (*.*)|*.*";
             open.FilterIndex = 1;
 
             if (open.ShowDialog() == DialogResult.OK)
@@ -137,6 +145,12 @@ namespace SAP_2
             {
                 textBox1.Text = open.FileName;
             }
+        }
+
+        private void playlistEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            playlist_editor form = new playlist_editor();
+            form.Show();
         }
     }
 }

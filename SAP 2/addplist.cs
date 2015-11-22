@@ -67,7 +67,7 @@ namespace SAP_2
             if (listBox.SelectedIndex >= 0)
             {
                 listBox.Items.RemoveAt(listBox.SelectedIndex);
-                playlistSongs.Remove(Convert.ToString(listBox.SelectedIndex));
+                playlistSongs.RemoveAt(listBox.SelectedIndex);
             }
         }
 

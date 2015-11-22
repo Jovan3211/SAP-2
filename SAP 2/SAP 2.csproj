@@ -54,6 +54,12 @@
       <DependentUpon>addplist.cs</DependentUpon>
     </Compile>
     <Compile Include="folderBrowserDialog1.cs" />
+    <Compile Include="playlist editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="playlist editor.Designer.cs">
+      <DependentUpon>playlist editor.cs</DependentUpon>
+    </Compile>
     <Compile Include="playsingle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="addplist.resx">
       <DependentUpon>addplist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="playlist editor.resx">
+      <DependentUpon>playlist editor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="playsingle.resx">
       <DependentUpon>playsingle.cs</DependentUpon>

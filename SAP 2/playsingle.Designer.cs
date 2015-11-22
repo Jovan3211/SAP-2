@@ -42,7 +42,7 @@
             this.label_volumeAmount = new System.Windows.Forms.Label();
             this.label_songName = new System.Windows.Forms.Label();
             this.label_songTime = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_upNext = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +55,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,31 +152,33 @@
             // 
             this.label_songName.AutoSize = true;
             this.label_songName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songName.Location = new System.Drawing.Point(7, 124);
+            this.label_songName.Location = new System.Drawing.Point(7, 143);
             this.label_songName.Name = "label_songName";
             this.label_songName.Size = new System.Drawing.Size(62, 17);
             this.label_songName.TabIndex = 14;
             this.label_songName.Text = "Playing: ";
+            this.label_songName.Visible = false;
             // 
             // label_songTime
             // 
             this.label_songTime.AutoSize = true;
-            this.label_songTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songTime.Location = new System.Drawing.Point(226, 121);
+            this.label_songTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_songTime.Location = new System.Drawing.Point(6, 118);
             this.label_songTime.Name = "label_songTime";
-            this.label_songTime.Size = new System.Drawing.Size(49, 20);
+            this.label_songTime.Size = new System.Drawing.Size(55, 22);
             this.label_songTime.TabIndex = 15;
             this.label_songTime.Text = "00:00";
             // 
-            // label2
+            // label_upNext
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(7, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Up next: ";
+            this.label_upNext.AutoSize = true;
+            this.label_upNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_upNext.Location = new System.Drawing.Point(7, 165);
+            this.label_upNext.Name = "label_upNext";
+            this.label_upNext.Size = new System.Drawing.Size(64, 17);
+            this.label_upNext.TabIndex = 16;
+            this.label_upNext.Text = "Up next: ";
+            this.label_upNext.Visible = false;
             // 
             // t1
             // 
@@ -228,7 +231,8 @@
             // 
             this.playlistToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createANewPlaylistToolStripMenuItem,
-            this.openAPlaylistToolStripMenuItem});
+            this.openAPlaylistToolStripMenuItem,
+            this.playlistEditorToolStripMenuItem});
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.playlistToolStripMenuItem.Text = "Playlist";
@@ -268,12 +272,19 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // playlistEditorToolStripMenuItem
+            // 
+            this.playlistEditorToolStripMenuItem.Name = "playlistEditorToolStripMenuItem";
+            this.playlistEditorToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.playlistEditorToolStripMenuItem.Text = "Playlist editor";
+            this.playlistEditorToolStripMenuItem.Click += new System.EventHandler(this.playlistEditorToolStripMenuItem_Click);
+            // 
             // playsingle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 250);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_upNext);
             this.Controls.Add(this.label_songTime);
             this.Controls.Add(this.label_songName);
             this.Controls.Add(this.label_volumeAmount);
@@ -315,7 +326,7 @@
         private System.Windows.Forms.Label label_volumeAmount;
         private System.Windows.Forms.Label label_songName;
         private System.Windows.Forms.Label label_songTime;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_upNext;
         private System.Windows.Forms.Timer t1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem playlistToolStripMenuItem;
@@ -328,5 +339,6 @@
         private System.Windows.Forms.ToolStripMenuItem playASongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playMultipleSongsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playlistEditorToolStripMenuItem;
     }
 }
