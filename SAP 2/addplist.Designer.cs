@@ -96,6 +96,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(440, 199);
             this.listBox.TabIndex = 5;
+            this.listBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox_DragDrop);
             this.listBox.DragOver += new System.Windows.Forms.DragEventHandler(this.listBox_DragOver);
             this.listBox.DragLeave += new System.EventHandler(this.listBox_DragLeave);
             // 
@@ -127,7 +128,7 @@
             this.textBox_addSong.Name = "textBox_addSong";
             this.textBox_addSong.Size = new System.Drawing.Size(409, 20);
             this.textBox_addSong.TabIndex = 8;
-            this.textBox_addSong.Text = "Select a song to add.";
+            this.textBox_addSong.Text = "Select a song to add. You can also drag and drop files below.";
             this.textBox_addSong.Click += new System.EventHandler(this.textBox_addSong_Click);
             // 
             // button_addSongDialog

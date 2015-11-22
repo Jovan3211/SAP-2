@@ -114,14 +114,25 @@ namespace SAP_2
             textBox_addSong.ForeColor = Color.Black;
         }
 
+        //drag and drop prikaz slike
         private void listBox_DragOver(object sender, DragEventArgs e)
         {
             pictureBox_dragDrop.Visible = true;
         }
 
+        //drag and drop sklanjanje slike
         private void listBox_DragLeave(object sender, EventArgs e)
         {
             pictureBox_dragDrop.Visible = false;
+        }
+
+        //drag and drop ubacivanje pesama
+        private void listBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] dropped = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+
+            listBox.Items.AddRange(dropped);
+            playlistSongs.AddRange(dropped);
         }
     }
 }
