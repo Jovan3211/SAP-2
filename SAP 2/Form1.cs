@@ -18,9 +18,21 @@ namespace SAP_2
 
         private void playSingle_Click(object sender, EventArgs e)
         {
-            playsingle psing = new playsingle();
-            psing.Show();
+            playsingle form = new playsingle();
+            form.Show();
 
+        }
+
+        private void createplist_Click(object sender, EventArgs e)
+        {
+            addplist form = new addplist();
+            form.Show();
+        }
+
+        private void selectplist_Click(object sender, EventArgs e)
+        {
+            selectplist form = new selectplist();
+            form.Show();
         }
     }
 }

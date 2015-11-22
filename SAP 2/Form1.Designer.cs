@@ -51,6 +51,7 @@
             this.createplist.TabIndex = 1;
             this.createplist.Text = "Create playlist";
             this.createplist.UseVisualStyleBackColor = true;
+            this.createplist.Click += new System.EventHandler(this.createplist_Click);
             // 
             // selectplist
             // 
@@ -60,6 +61,7 @@
             this.selectplist.TabIndex = 2;
             this.selectplist.Text = "Select playlist";
             this.selectplist.UseVisualStyleBackColor = true;
+            this.selectplist.Click += new System.EventHandler(this.selectplist_Click);
             // 
             // Form1
             // 
