@@ -52,10 +52,10 @@
             this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createANewPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openAPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.playlistEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -251,6 +251,13 @@
             this.openAPlaylistToolStripMenuItem.Text = "Open a playlist";
             this.openAPlaylistToolStripMenuItem.Click += new System.EventHandler(this.openAPlaylistToolStripMenuItem_Click);
             // 
+            // playlistEditorToolStripMenuItem
+            // 
+            this.playlistEditorToolStripMenuItem.Name = "playlistEditorToolStripMenuItem";
+            this.playlistEditorToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.playlistEditorToolStripMenuItem.Text = "Playlist editor";
+            this.playlistEditorToolStripMenuItem.Click += new System.EventHandler(this.playlistEditorToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -272,18 +279,11 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // playlistEditorToolStripMenuItem
-            // 
-            this.playlistEditorToolStripMenuItem.Name = "playlistEditorToolStripMenuItem";
-            this.playlistEditorToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.playlistEditorToolStripMenuItem.Text = "Playlist editor";
-            this.playlistEditorToolStripMenuItem.Click += new System.EventHandler(this.playlistEditorToolStripMenuItem_Click);
-            // 
             // playsingle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 250);
+            this.ClientSize = new System.Drawing.Size(284, 191);
             this.Controls.Add(this.label_upNext);
             this.Controls.Add(this.label_songTime);
             this.Controls.Add(this.label_songName);
@@ -299,8 +299,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 288);
-            this.MinimumSize = new System.Drawing.Size(300, 288);
+            this.MaximumSize = new System.Drawing.Size(300, 229);
+            this.MinimumSize = new System.Drawing.Size(300, 229);
             this.Name = "playsingle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "SAP 2";
