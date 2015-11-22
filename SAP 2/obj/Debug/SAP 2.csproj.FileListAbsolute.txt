@@ -21,3 +21,15 @@ C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\bin\Debug\Interop.WMPLib.dll
 C:\Users\Nada\Documents\GitHub\Sap2\SAP-2\SAP 2\obj\Debug\SAP_2.PlayerControl.resources
 D:\Programming\SAP-2\SAP 2\obj\Debug\SAP_2.addplist.resources
 D:\Programming\SAP-2\SAP 2\obj\Debug\SAP_2.selectplist.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP 2.exe
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP 2.pdb
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\bin\Debug\SAP 2.exe
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\bin\Debug\SAP 2.pdb
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\bin\Debug\Interop.WMPLib.dll
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP 2.csprojResolveAssemblyReference.cache
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP_2.addplist.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP_2.Form1.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP_2.playsingle.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP_2.Properties.Resources.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP_2.selectplist.resources
+C:\Users\Milan\Desktop\GitHub\SAP-2\SAP 2\obj\Debug\SAP 2.csproj.GenerateResource.Cache

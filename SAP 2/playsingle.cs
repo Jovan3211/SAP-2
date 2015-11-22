@@ -9,11 +9,13 @@ namespace SAP_2
         //deklaracije
         public string source;
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-        playsingle pls = new playsingle();
+
+        bool pauseActive = false;
 
         public playsingle()
         {
             InitializeComponent();
+            t1.Start();
             wplayer.settings.volume = 50;
         }
 
@@ -29,15 +31,16 @@ namespace SAP_2
             wplayer.URL = source;
             wplayer.controls.play();
             label_songName.Text += Path.GetFileNameWithoutExtension(source);
-            pls.Text += Path.GetFileNameWithoutExtension(source);
+            playsingle.ActiveForm.Text += Path.GetFileNameWithoutExtension(source);                  // Umesto onog tvog pls
         }
 
         //zaustavljanje pesme
         private void button2_Click(object sender, EventArgs e)
         {
             wplayer.controls.stop();
+            button_play.Enabled = true;
             label_songName.Text = "Playing: ";
-            pls.Text = "Playing ";
+            playsingle.ActiveForm.Text = "Playing:  ";                                               // Umesto onog tvog pls
         }
 
         //selektovanje pesme preko file browsera.
@@ -57,13 +60,29 @@ namespace SAP_2
         //pauziranje pesme
         private void button_pause_Click(object sender, EventArgs e)
         {
-            wplayer.controls.pause();
+            if (!pauseActive)
+            {
+                wplayer.controls.pause();
+                pauseActive = true;
+                button_play.Enabled = false;
+            }
+            else
+            {
+                wplayer.controls.play();
+                pauseActive = false;
+                button_play.Enabled = true;
+            }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label_volumeAmount.Text = "" + trackBar1.Value;
             wplayer.settings.volume = trackBar1.Value;
+        }
+
+        private void t1_Tick(object sender, EventArgs e)
+        {
+            label_songTime.Text = wplayer.controls.currentPositionString;
         }
     }
 }

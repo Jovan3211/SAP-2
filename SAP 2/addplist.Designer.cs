@@ -97,7 +97,7 @@
             this.listBox.Size = new System.Drawing.Size(440, 199);
             this.listBox.TabIndex = 5;
             this.listBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox_DragDrop);
-            this.listBox.DragOver += new System.Windows.Forms.DragEventHandler(this.listBox_DragOver);
+            this.listBox.DragOver += new System.Windows.Forms.DragEventHandler(this.listBox_DragEnter);
             this.listBox.DragLeave += new System.EventHandler(this.listBox_DragLeave);
             // 
             // button_add

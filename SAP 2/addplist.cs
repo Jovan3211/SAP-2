@@ -115,7 +115,7 @@ namespace SAP_2
         }
 
         //drag and drop prikaz slike
-        private void listBox_DragOver(object sender, DragEventArgs e)
+        private void listBox_DragEnter(object sender, DragEventArgs e)
         {
             pictureBox_dragDrop.Visible = true;
         }
@@ -131,8 +131,10 @@ namespace SAP_2
         {
             string[] dropped = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
-            listBox.Items.AddRange(dropped);
-            playlistSongs.AddRange(dropped);
+            foreach (string x in dropped)
+                listBox.Items.Add(x);
+            foreach (string x in dropped)
+                playlistSongs.Add(x);
         }
     }
 }

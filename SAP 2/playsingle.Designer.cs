@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(playsingle));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.label_songName = new System.Windows.Forms.Label();
             this.label_songTime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.t1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,7 +139,7 @@
             // 
             this.label_songName.AutoSize = true;
             this.label_songName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songName.Location = new System.Drawing.Point(7, 102);
+            this.label_songName.Location = new System.Drawing.Point(7, 101);
             this.label_songName.Name = "label_songName";
             this.label_songName.Size = new System.Drawing.Size(62, 17);
             this.label_songName.TabIndex = 14;
@@ -147,7 +149,7 @@
             // 
             this.label_songTime.AutoSize = true;
             this.label_songTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_songTime.Location = new System.Drawing.Point(215, 99);
+            this.label_songTime.Location = new System.Drawing.Point(206, 99);
             this.label_songTime.Name = "label_songTime";
             this.label_songTime.Size = new System.Drawing.Size(49, 20);
             this.label_songTime.TabIndex = 15;
@@ -162,6 +164,11 @@
             this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Up next: ";
+            // 
+            // t1
+            // 
+            this.t1.Interval = 500;
+            this.t1.Tick += new System.EventHandler(this.t1_Tick);
             // 
             // playsingle
             // 
@@ -203,5 +210,6 @@
         private System.Windows.Forms.Label label_songName;
         private System.Windows.Forms.Label label_songTime;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer t1;
     }
 }
