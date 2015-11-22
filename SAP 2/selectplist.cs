@@ -14,6 +14,7 @@ namespace SAP_2
         public selectplist()
         {
             InitializeComponent();
+			
         }
     }
 }
